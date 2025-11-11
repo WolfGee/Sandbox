@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package zmq_example;
+
+message Request {
+  string content = 1;
+  int32 sequence_number = 2;
+  int64 timestamp = 3;
+}
+
+message Response {
+  string content = 1;
+  int32 sequence_number = 2;
+  bool success = 3;
+  int64 timestamp = 4;
+}
